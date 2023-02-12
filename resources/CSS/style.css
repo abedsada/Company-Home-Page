@@ -1,0 +1,281 @@
+html{
+    color: aliceblue;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    height: 100%;
+    background-color: rgb(57, 53, 53);
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    position: relative;
+    top:0px; /* To offset for fixed header. */
+  }
+footer{
+    position: relative;
+    top:0px; /* To offset for fixed header. */
+  }
+
+/*Header*/
+header{
+    position: fixed;
+    width:100%;
+    background-color: rgb(18, 29, 52);
+    top: -0px;
+    z-index:10;
+}
+#Slogo{
+    display: block;
+    color: #4FA9DB;
+    margin-left: 1.5%;
+    font-weight: bolder;
+    font-size: 23px;
+}
+#Slogo span{
+    color: #FFC375;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+header .content{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+nav {
+    list-style-type: none;
+    font-size: 18px;
+  }
+nav li{
+    display: inline-block;
+    margin: 0 40px;
+}
+nav li a{
+    color:aliceblue;
+}
+
+nav li a:hover{
+    color:rgb(149, 160, 169);
+}
+
+/*Header breakpoints*/
+@media only screen and (max-width: 600px){
+    header .content{
+        justify-content: space-around;  
+    }
+    nav li{
+        margin: 0 20px;
+        font-size:16px
+    }   
+}
+
+@media only screen and (max-width: 460px){
+    nav li{
+        margin: 0 10px;
+        font-size:14px    
+    } 
+    #Slogo span{
+        display: none;
+    }
+    #Slogo{
+        font-size: 20px;
+    }      
+}
+
+
+/*Mission*/
+#Mission{
+    background-image: url(../pics/services.jpg);
+    background-size:cover;
+    background-position: center;
+    min-height: 100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+#Mission .content{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items:center;
+    justify-content:center;
+    background-color:black;
+    width:100%;
+    border-radius: 2%;
+    opacity: 0.8;
+    padding: 2.5% 0;
+}
+#Mission .content h2, #Mission .content h4{
+    margin: 1%;
+}
+#Mission .content h2{
+    margin: 1%;
+    font-weight: bolder;
+    font-size: 45px;
+}
+#Mission .content h4{
+    margin: 1%;
+    font-weight: bolder;
+    font-size: 20px;
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 480px){
+    #Mission .content{
+        padding: 5% 0;
+        background-color:transparent;
+        color: rgb(255, 255, 255);
+
+    }
+    #Mission .content h2{
+        font-size: 30px;
+        margin: 5%;
+    }
+    #Mission .content h4{
+        max-width: 90%;
+        font-size: 16px;
+        margin: 5%;
+        line-height: 1.6;
+    }
+}
+@media only screen and (max-width: 320px){
+    #Mission .content{
+        padding: 10% 0;
+    }
+    #Mission .content h2{
+        font-size: 30px;
+    }
+    #Mission .content h4{
+        max-width: 90%;
+        font-size: 16px;
+    }
+}
+
+/*Services*/
+#ServicesC{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5%;
+    min-height: 100vh;
+    background-color: #f3f3f3;  
+}
+#h2head{
+    color: #4A8C5D;
+    font-size: 45px;
+    font-weight: bolder;
+    margin-top: 0%;
+    margin-bottom: 4%;
+}
+
+#Services{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+.feature {
+    padding: 1rem 0.5rem;
+    margin: 1% 0.5%;
+    background-color: white;
+    width: 25%;
+    height: 320px;
+  }
+  
+  .feature .image-container{
+    width: 90%;
+    height: 50%;
+    min-height: 168px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;    
+  }
+  
+  .feature .image-container img{
+    display: block;
+    width: 100%;
+    height: auto;
+  } 
+  
+  .feature h2 {
+    padding-top:20px;
+    padding-bottom: .5rem;
+    font-size: 36px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin-bottom: 3.5%;
+  }
+  
+  .feature h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #4a4a4a;
+    padding-bottom:10px;
+  }
+
+
+@media only screen and (max-width: 1250px){
+    .feature{
+        min-width: 280px;
+        height: 280px;
+    }
+    .feature h2 {
+        font-size: 30px;
+      }
+} 
+  @media only screen and (max-width: 480px){
+    .feature h3 {
+        padding-bottom:5px;
+    }  
+}
+
+/*Footer*/
+footer{
+    background-color: rgb(57, 53, 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:15px;
+}
+
+footer .content{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 1%;
+}
+
+footer #credit{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1%;
+    font-size:10px;
+}
+
+
+@media only screen and (max-width: 680px){
+    footer .content{
+        font-size:12px;
+    }
+    footer #credit{
+        font-size:8px;
+    }
+}
+@media only screen and (max-width: 480px){
+    footer .content{
+        font-size:10px;
+    }
+
+}
