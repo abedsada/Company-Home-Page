@@ -23,7 +23,7 @@ footer{
 header{
     position: fixed;
     width:100%;
-    background-color: rgb(18, 29, 52);
+    background-color: rgb(7, 17, 37);
     top: -0px;
     z-index:10;
 }
